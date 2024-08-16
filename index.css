@@ -1,0 +1,128 @@
+:root {
+
+    --colour-yellow: hsl(47, 88%, 63%);
+    --colour-white: hsl(0, 0%, 100%);
+    --colour-gray500: hsl(0, 0%, 42%);
+    --colour-gray950: hsl(0, 0%, 7%);
+
+    --corner-radius1: 20px;
+    --corner-radius2: 10px;
+    --corner-radius3: 4px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--colour-yellow);
+    display: flex;
+    font-size: 16px;
+    font-family: "Figtree";
+    align-content: center;
+    height: 100vh;
+}
+
+.text-preset-1 {
+    font-family: "Figtree", sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--colour-gray950)
+    line-height: 1.5;
+    letter-spacing: 0px;
+}
+
+.text-preset-2 {
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--colour-gray500);
+    line-height: 1.5;
+    letter-spacing: 0px;
+}
+
+.text-preset-3 {
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--colour-gray950)
+    line-height: 1.5;
+    letter-spacing: 0px;
+}
+
+.text-preset-4 {
+    font-family: "Figtree", sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--colour-gray950)
+    line-height: 1.5;
+    letter-spacing: 0px;
+}
+
+.card {
+    background-color: var(--colour-white);
+    outline: 1px solid var(--colour-gray950);
+    height: fit-content;
+    box-sizing: border-box;
+    max-width: 384px;
+    width: min(384px, 100% - 6rem);
+    margin-inline: auto;
+    margin: auto;
+    border-radius: var(--corner-radius1);
+    padding: 1.5em;
+    box-shadow: 10px 10px 0px 0px var(--colour-gray950);
+}
+
+.card--image {
+    height: 200px;
+    border-radius: var(--corner-radius2);
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.card--image img {
+    display: block;
+    object-fit: cover;
+}
+
+.card--tag {
+    background-color: var(--colour-yellow);
+    border-radius: var(--corner-radius3);
+    width: fit-content;
+    padding: 4px 12px;
+}
+
+.card--body {
+    height:fit-content;
+    width:100%;
+    padding-bottom: 0.75em;
+}
+
+.card--body > * {
+    margin-bottom: 0.75rem;
+}
+
+h1:hover,
+h1:active,
+h1:focus {
+    animation: onHover 0.5s forwards;
+    cursor: pointer;
+}
+
+@keyframes onHover {
+    100% {
+        color: var(--colour-yellow);
+        scale: 101%;
+    }
+}
+
+.card--footer{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: fit-content;
+    width: fit-content;
+}
