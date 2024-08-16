@@ -27,8 +27,10 @@ body {
 main {
     background-color: var(--colour-yellow);
     display: flex;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
+    width: 100%;
 }
 
 .text-preset-1 {
