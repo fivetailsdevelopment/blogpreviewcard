@@ -9,6 +9,8 @@
     --corner-radius2: 10px;
     --corner-radius3: 4px;
 
+    --card-width:384px;
+
 }
 
 * {
@@ -66,8 +68,7 @@ body {
     outline: 1px solid var(--colour-gray950);
     height: fit-content;
     box-sizing: border-box;
-    max-width: 384px;
-    width: min(384px, 100% - 6rem);
+    width: var(--card-width);
     margin-inline: auto;
     margin: auto;
     border-radius: var(--corner-radius1);
@@ -85,7 +86,8 @@ body {
 
 .card--image img {
     display: block;
-    object-fit: cover;
+    object-fit: fill;
+    height:100%;
 }
 
 .card--tag {
@@ -125,4 +127,18 @@ h1:focus {
     gap: 12px;
     height: fit-content;
     width: fit-content;
+}
+
+@media screen and (max-width: 430px) {
+    :root {
+        --card-width: 327px;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    :root {
+        --card-width: 90vw;
+    }
+
 }
